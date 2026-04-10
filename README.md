@@ -206,3 +206,5 @@ If the queries return nothing:
     - Run: `SELECT * FROM Broadcasts ORDER BY created_at DESC LIMIT 1` to get the ID.
     - If `survivor_id` is null, the name matching didn't work.
 #
+
+https://medium.com/@khalid.mtwaly/building-an-ai-powered-disaster-response-system-with-graph-rag-cc8ce6da4110
