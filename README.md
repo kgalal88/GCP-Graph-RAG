@@ -208,7 +208,7 @@ If the queries return nothing:
 
 
 ## 5. Deploy to Cloud Run
-1. Run the Deployment Script
+### 1. Run the Deployment Script
 👉💻 Run the deployment script:
 
 
@@ -222,7 +222,7 @@ After it successfully deployed, you will have the url, this is deployed url for 
 source .env && gcloud run services add-iam-policy-binding survivor-frontend --region $REGION --member=allUsers --role=roles/run.invoker && gcloud run services add-iam-policy-binding survivor-backend --region $REGION --member=allUsers --role=roles/run.invoker
 Go to the deployed url, and you will see you application live there!
 
-2. Understanding the Build Pipeline
+### 2. Understanding the Build Pipeline
 The cloudbuild.yaml file defines the following sequential steps:
 
 Backend Build: Builds the Docker image from backend/Dockerfile.
@@ -233,7 +233,7 @@ Installs dependencies.
 Builds the React app, injecting VITE_API_URL=.
 Frontend Image: Builds the Docker image from frontend/Dockerfile (packaging the static assets).
 Frontend Deploy: Deploys the frontend container.
-3. Verify Deployment
+### 3. Verify Deployment
 Once the build completes (check the logs link provided by the script), you can verify:
 
 Go to the Cloud Run Console.
