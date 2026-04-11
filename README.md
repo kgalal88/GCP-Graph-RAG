@@ -205,7 +205,41 @@ If the queries return nothing:
 2.  **Check extraction logs**: The agent might have failed to identify "David Chen" exactly.
     - Run: `SELECT * FROM Broadcasts ORDER BY created_at DESC LIMIT 1` to get the ID.
     - If `survivor_id` is null, the name matching didn't work.
-#
+
+
+## 5. Deploy to Cloud Run
+1. Run the Deployment Script
+👉💻 Run the deployment script:
+
+
+cd ~/way-back-home/level_2
+./deploy_cloud_run.sh
+After it successfully deployed, you will have the url, this is deployed url for you! deployed
+
+👉💻 Before you grab the url, grant the permission by running:
+
+
+source .env && gcloud run services add-iam-policy-binding survivor-frontend --region $REGION --member=allUsers --role=roles/run.invoker && gcloud run services add-iam-policy-binding survivor-backend --region $REGION --member=allUsers --role=roles/run.invoker
+Go to the deployed url, and you will see you application live there!
+
+2. Understanding the Build Pipeline
+The cloudbuild.yaml file defines the following sequential steps:
+
+Backend Build: Builds the Docker image from backend/Dockerfile.
+Backend Deploy: Deploys the backend container to Cloud Run.
+Capture URL: Gets the new Backend URL.
+Frontend Build:
+Installs dependencies.
+Builds the React app, injecting VITE_API_URL=.
+Frontend Image: Builds the Docker image from frontend/Dockerfile (packaging the static assets).
+Frontend Deploy: Deploys the frontend container.
+3. Verify Deployment
+Once the build completes (check the logs link provided by the script), you can verify:
+
+Go to the Cloud Run Console.
+Find the survivor-frontend service.
+Click the URL to open the application.
+Perform a search query to ensure the frontend can talk to the backend.
 
 ## Link to Medium article
 https://medium.com/@khalid.mtwaly/building-an-ai-powered-disaster-response-system-with-graph-rag-cc8ce6da4110
