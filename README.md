@@ -210,16 +210,17 @@ If the queries return nothing:
 ## 5. Deploy to Cloud Run
 ### 1. Run the Deployment Script
 👉💻 Run the deployment script:
-
-
+```bash
 cd ~/way-back-home/level_2
 ./deploy_cloud_run.sh
+```
 After it successfully deployed, you will have the url, this is deployed url for you! deployed
 
 👉💻 Before you grab the url, grant the permission by running:
 
-
+```bash
 source .env && gcloud run services add-iam-policy-binding survivor-frontend --region $REGION --member=allUsers --role=roles/run.invoker && gcloud run services add-iam-policy-binding survivor-backend --region $REGION --member=allUsers --role=roles/run.invoker
+```
 Go to the deployed url, and you will see you application live there!
 
 ### 2. Understanding the Build Pipeline
