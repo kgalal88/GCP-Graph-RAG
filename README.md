@@ -214,7 +214,9 @@ If the queries return nothing:
 cd ~/way-back-home/level_2
 ./deploy_cloud_run.sh
 ```
-After it successfully deployed, you will have the url, this is deployed url for you! deployed
+After it successfully deployed, you will have the url, this is deployed url for you!
+<img width="1412" height="458" alt="image" src="https://github.com/user-attachments/assets/bdd99436-6032-4fbc-9ffa-fb88a5a7ae05" />
+
 
 👉💻 Before you grab the url, grant the permission by running:
 
@@ -226,14 +228,14 @@ Go to the deployed url, and you will see you application live there!
 ### 2. Understanding the Build Pipeline
 The cloudbuild.yaml file defines the following sequential steps:
 
-Backend Build: Builds the Docker image from backend/Dockerfile.
-Backend Deploy: Deploys the backend container to Cloud Run.
-Capture URL: Gets the new Backend URL.
-Frontend Build:
-Installs dependencies.
-Builds the React app, injecting VITE_API_URL=.
-Frontend Image: Builds the Docker image from frontend/Dockerfile (packaging the static assets).
-Frontend Deploy: Deploys the frontend container.
+#### 1. Backend Build: Builds the Docker image from backend/Dockerfile.
+#### 2. Backend Deploy: Deploys the backend container to Cloud Run.
+#### 3. Capture URL: Gets the new Backend URL.
+#### 4. Frontend Build:
+#### 5. Installs dependencies.
+#### 6. Builds the React app, injecting VITE_API_URL=.
+#### 7. Frontend Image: Builds the Docker image from frontend/Dockerfile (packaging the static assets).
+#### 8. Frontend Deploy: Deploys the frontend container.
 ### 3. Verify Deployment
 Once the build completes (check the logs link provided by the script), you can verify:
 
