@@ -232,8 +232,8 @@ The cloudbuild.yaml file defines the following sequential steps:
 #### 2. Backend Deploy: Deploys the backend container to Cloud Run.
 #### 3. Capture URL: Gets the new Backend URL.
 #### 4. Frontend Build:
-##### Installs dependencies.
-##### Builds the React app, injecting VITE_API_URL=.
+##### - Installs dependencies.
+##### - Builds the React app, injecting VITE_API_URL=.
 #### 5. Frontend Image: Builds the Docker image from frontend/Dockerfile (packaging the static assets).
 #### 6. Frontend Deploy: Deploys the frontend container.
 ### 3. Verify Deployment
