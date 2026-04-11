@@ -211,7 +211,6 @@ If the queries return nothing:
 ### 1. Run the Deployment Script
 👉💻 Run the deployment script:
 ```bash
-cd ~/way-back-home/level_2
 ./deploy_cloud_run.sh
 ```
 After it successfully deployed, you will have the url, this is deployed url for you!
