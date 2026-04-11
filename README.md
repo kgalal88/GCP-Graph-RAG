@@ -243,6 +243,10 @@ Go to the Cloud Run Console.
 Find the survivor-frontend service.
 Click the URL to open the application.
 Perform a search query to ensure the frontend can talk to the backend.
+<img width="1908" height="799" alt="image" src="https://github.com/user-attachments/assets/219f6602-7ad4-4be3-8831-91a28feb5496" />
+<img width="1100" height="610" alt="image" src="https://github.com/user-attachments/assets/8d71e5d4-c7b7-47de-adde-be746eccfc3c" />
+
+
 
 ## Link to Medium article
 https://medium.com/@khalid.mtwaly/building-an-ai-powered-disaster-response-system-with-graph-rag-cc8ce6da4110
